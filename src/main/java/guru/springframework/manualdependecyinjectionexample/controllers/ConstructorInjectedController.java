@@ -1,6 +1,7 @@
 package guru.springframework.manualdependecyinjectionexample.controllers;
 
 import guru.springframework.manualdependecyinjectionexample.Services.GreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -15,7 +16,7 @@ public class ConstructorInjectedController {
     /**
      * Can only instantiate this class if you pass in a greeting service
      */
-    public ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("greetingServicePrimary") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
