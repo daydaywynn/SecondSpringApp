@@ -13,7 +13,7 @@ public class ConstructorInjectedController {
 
     private final GreetingService greetingService; //interface, not the Impl
 
-    /**
+     /**
      * Can only instantiate this class if you pass in a greeting service
      */
     public ConstructorInjectedController(@Qualifier("greetingServicePrimary") GreetingService greetingService) {
